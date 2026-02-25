@@ -19,7 +19,6 @@ public class User {
     }
     Chien chien1 = new Chien("Buddy", 4, "Golden", 40);
 
-
 }
 
 class Animal {
