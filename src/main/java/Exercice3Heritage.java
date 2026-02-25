@@ -6,18 +6,9 @@ public class Exercice3Heritage {
         System.out.println("Your name is : " + student.getNom());
         System.out.println("your old is : " + student.getAge() + " ans.");
         System.out.println("The name of your university is : " + student.getUniversity());
-
-        Descriptible d = student; // Polymorphisme via l'interface
-        System.out.println(d.decrire());
     }
 }
-
-// Les collections en Java sont des interfaces
-interface Descriptible {
-    String decrire();
-}
-
-class Person implements Descriptible {
+class Person {
     private String nom;
     private int age;
 
@@ -43,11 +34,6 @@ class Person implements Descriptible {
 //        this.age = age;
 //    }
 
-    @Override // Annotation
-    public String decrire() {
-        return "Je m'appelle " + nom + ", j'ai " + age + " ans.";
-    }
-
 }
 
 class Student extends Person {
@@ -62,12 +48,6 @@ class Student extends Person {
     // Getter for university attribute
     public String getUniversity() {
         return university;
-    }
-
-    // Redefinition de la méthode decrire()
-    @Override // Annotation
-    public String decrire() {
-        return super.decrire() + " J'étudie à " + university + ".";
     }
 
 }
