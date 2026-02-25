@@ -19,7 +19,7 @@ public class Exercise4Inheritance {
 }
 
 // Les Interfaces en Java
-interface Describle {
+interface Descriptible {
     String decrire();
 }
 
