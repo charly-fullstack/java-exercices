@@ -16,21 +16,13 @@ public class Exercice5Inheritance {
         }
     }
 }
-// Les Interfaces en Java
-interface Describle {
-    String decrire();
-}
+
 
 // Classe abstraite Forme
-abstract class Forme implements Descriptible {
+abstract class Forme {
 
     // Méthode abstraite calculeSurface(),à implémenter dans les sous-classes
     public abstract double calculerSurface();
-
-    @Override // Les annotations en Java
-    public String decrire() {
-        return "Bonjour tout le monde";
-    }
 
 }
 
@@ -47,11 +39,6 @@ class Cercle extends Forme {
     @Override // C'est une bonne méthode pour s'assurer que j'ai bien redefinis la méthode de la classe parente au niveau de la classe fille
     public double calculerSurface() {
         return Math.PI * rayon * rayon; // Calcule de la surface d'un cercle PI * r2
-    }
-
-    @Override // Les annotations
-    public String decrire() {
-        return "Bonjour tout le monde!".toUpperCase();
     }
 
 }
@@ -75,10 +62,6 @@ class Rectangle extends Forme {
         return longueur * largeur; // Calcul de la surface d'un rectangle :
     }
 
-    @Override
-    public String decrire() {
-        return "Hello World!!";
-    }
 }
 
 class Triangle extends Forme {
@@ -98,10 +81,6 @@ class Triangle extends Forme {
         return base * hauteur / 2;
     }
 
-    @Override
-    public String decrire() {
-        return "Buna Ziua";
-    }
 }
 
 class Carre extends Forme {
@@ -119,11 +98,5 @@ class Carre extends Forme {
     public double calculerSurface() {
         return cote * cote;
     }
-
-    @Override
-    public String decrire() {
-        return "Good morning";
-    }
-
 
 }
